@@ -1,12 +1,13 @@
-const validate = ()=>{
-
-  const username = document.getElementById("Username");
-  const error = document.getElementById("usernameError");
+const Validate = (event)=>{
 
 
-if(username.value ==""){
-  username.style.border = "color: red"
+  let userName = document.getElementById("Username");
+  let userNameError = document.getElementById("usernameErr");
+
+
+if(userName.value ==""){
+  userName.style.border = "solid red"
+  event.preventDefault()
+}
 }
 
-
-}
