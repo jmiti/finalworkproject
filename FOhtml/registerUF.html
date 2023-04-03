@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Urban Farmer Registration Form</title>
+	<style>
+		body {
+			background-image: url(../images/istockphoto-1179990617-170667a.jpg);
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		
+		h1 {
+			text-align: center;
+			margin-top: 20px;
+		}
+		
+		form {
+			margin: 0 auto;
+			max-width: 600px;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+		}
+		
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		
+		input[type=text], input[type=email], input[type=number] {
+			padding: 10px;
+			width: 100%;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			margin-bottom: 20px;
+		}
+		
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		input[type=submit]:hover {
+			background-color: #3e8e41;
+		}
+		
+		.error {
+			color: red;
+			font-size: 0.8em;
+			margin-top: 5px;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<h1>Urban Farmer Registration Form</h1>
+	<form action="#" method="post">
+		<label for="nin">Name:</label>
+		<input type="text" id="name" name="name" required>
+		
+		<label for="ward">Gender:</label>
+		<input type="text" id="gender" name="gender" required>
+
+        <label for="ward">Date of registration:</label>
+		<input type="text" id="DOR" name="DOR" required>
+
+        <label for="ward">Activities undertaken:</label>
+		<input type="text" id="activities undertaken" name="activities undertaken" required>
+
+        <label for="ward">Ward Name:</label>
+		<input type="text" id="ward" name="ward" required>
+
+        <label for="ward">NIN:</label>
+		<input type="text" id="nin" name="nin" required>
+		
+		<label for="unique_id">Unique ID:</label>
+		<input type="text" id="unique_id" name="unique_id" required>
+		
+		<input type="submit" value="Register">
+	</form>
+</body>
+</html>
+
