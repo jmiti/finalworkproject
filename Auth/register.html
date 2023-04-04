@@ -25,49 +25,49 @@
         <div class="card-title">
             <p>PLEASE ENTER YOUR DETAILS</p>
             <div class="card-body">
-                <form class="row g-3">
+                <form class="row g-3" action="register" onsubmit="return Validate()" method="POST">
                     <div class="col-md-6">
                       <label for="inputEmail4" class="form-label">Last Name</label>
-                      <input type="text" class="form-control" id="inputfirstname">
+                      <input type="text" class="form-control" id="inputlastname" name='lastname'>
                     </div>
                     <div class="col-md-6">
                       <label for="inputPassword4" class="form-label">First Name</label>
-                      <input type="password" class="form-control" id="inputlastname">
+                      <input type="password" class="form-control" id="inputfirstname" name='firstname'>
                     </div>
                     <div class="col-6">
                       <label for="inputAddress" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="inputEmail4" placeholder="name@example.com">
+                      <input type="email" class="form-control" id="inputEmail4" placeholder="name@example.com" name='email'>
                     </div>
                     <div class="col-6">
                       <label for="inputAddress2" class="form-label">Contact Number</label>
-                      <input type="number" class="form-control" id="inputcontact" placeholder="+256">
+                      <input type="number" class="form-control" id="inputcontact" placeholder="+256" name='contact'>
                     </div>
                     <div class="col-md-6">
                       <label for="inputCity" class="form-label">Date Of Birth</label>
-                      <input type="date" class="form-control" id="inputdob">
+                      <input type="date" class="form-control" id="inputdob" name='dob'>
                     </div>
                     <div class="col-md-4">
                       <label for="inputState" class="form-label">Gender</label>
                       <select id="inputState" class="form-select">
-                        <option selected>Male</option>
-                        <option>Female</option>
+                        <option name= 'male'>Male</option>
+                        <option name= 'female' >Female</option>
                       </select>
                     </div>
                     <div class="col-md-2">
                       <label for="inputZip" class="form-label">Ward</label>
-                      <input type="text" class="form-control" id="inputward">
+                      <input type="text" class="form-control" id="inputward" name='ward'>
                     </div>
                     <div class="col-6">
                         <label for="inputAddress" class="form-label">Create a Password</label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Atleast 8 characters">
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Atleast 8 characters" name='password'>
                       </div>
                       <div class="col-6">
                         <label for="inputAddress2" class="form-label">Confirm Passwod</label>
-                        <input type="password" class="form-control" id="inputPassword4">
+                        <input type="password" class="form-control" id="inputPassword4" name='confirmpassword'>
                       </div>
                     <div class="col-12">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <input class="form-check-input" type="checkbox" id="gridCheck" name='checkme'>
                         <label class="form-check-label" for="gridCheck">
                           You can check me out
                         </label>

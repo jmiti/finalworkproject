@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-// const passportLocalMongoose = require("passport-local-mongoose")
+const passportLocalMongoose = require("passport-local-mongoose")
 
 const registerSchema = new mongoose.Schema({
     lastname:{
@@ -31,7 +31,12 @@ const registerSchema = new mongoose.Schema({
             
         },
 
-        gender:{
+        male:{
+            type:String,
+            trim:true,
+        },
+
+        female:{
             type:String,
             trim:true,
         },
@@ -63,5 +68,5 @@ const registerSchema = new mongoose.Schema({
 
         
 })
-// registerSchema.plugin(passportLocalMongoose, {usernameField: "unique id"});
+registerSchema.plugin(passportLocalMongoose, {usernameField: "email"});
 module.exports = mongoose.model("Register",registerSchema)

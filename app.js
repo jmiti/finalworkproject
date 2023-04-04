@@ -2,13 +2,16 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const router = express.Router();
+const passport = require("passport");
 
 const mongoose= require("mongoose");
 const bodyParser= require("body-parser");
 const config = require("./config/database")
+const User = require("./models/registerModel")
+const session= require("express-session");
 
 const registerRoutes = require("./Routes/registerRoutes")
-
+const loginRoutes = require("./Routes/loginRoutes")
 
 
 
@@ -39,10 +42,25 @@ app.set("views", path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname, "public")));
 
 
+app.use(session({
+    secret: "secret",
+    resave: false,
+    saveUninitialized: false
+}))
+
+
+// * Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(User.createStrategy());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 
 app.use(express.static("public"))
 
 app.use("/", registerRoutes)
+app.use("/", loginRoutes)
 
 
 

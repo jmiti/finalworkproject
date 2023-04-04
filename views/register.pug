@@ -16,7 +16,7 @@ head
     .card-title
       p PLEASE ENTER YOUR DETAILS
       .card-body
-        form.row.g-3(action="./register" onsubmit="return validate()" method="POST")
+        form.row.g-3(action="./register" onsubmit="return Validate()" method="POST")
           .col-md-6
             label.form-label(for='inputEmail4') Last Name
             input#inputfirstname.form-control(type='text' name='lastname')
@@ -35,8 +35,8 @@ head
           .col-md-4
             label.form-label(for='inputState') Gender
             select#inputState.form-select(name='gender')
-              option(selected='') Male
-              option Female
+              option(name= 'male') Male
+              option(name= 'female') Female
           .col-md-2
             label.form-label(for='inputZip') Ward
             input#inputward.form-control(type='text' name='ward')
