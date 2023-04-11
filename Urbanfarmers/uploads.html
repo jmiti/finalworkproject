@@ -15,7 +15,7 @@
 <body>
   <div class="mx-auto" style="max-width: 500px;"> 
   <h1>Sign Up</h1>
-   <form>
+   <form action="#" onsubmit="return Validate3()" method="POST">
   <label for="name">Name:</label>
   <input type="text" id="name" name="name">
 
@@ -26,13 +26,13 @@
   <input type="date" id="date" name="date">
 
   <label for="unit-price">Unit Price (UGX):</label>
-  <input type="number" id="unit-price" name="unit-price">
+  <input type="number" id="unit_price" name="unit-price">
 
   <label for="quantity">Quantity:</label>
   <input type="number" id="quantity" name="quantity">
 
   <label for="payment-method">Mode of Payment:</label>
-  <select id="payment-method" name="payment-method">
+  <select id="payment_method" name="payment-method">
     <option value="cash">Cash</option>
     <option value="mobile-money">Mobile Money</option>
     <option value="bank-transfer">Bank Transfer</option>
@@ -42,18 +42,18 @@
   <textarea id="directions" name="directions"></textarea>
 
   <label for="delivery-method">Mode of Delivery:</label>
-  <select id="delivery-method" name="delivery-method">
+  <select id="delivery_method" name="delivery-method">
     <option value="pickup">Pickup</option>
     <option value="delivery">Delivery</option>
   </select>
 
   <label for="produce-type">Produce Type:</label>
-  <input type="text" id="produce-type" name="produce-type">
+  <input type="text" id="produce_type" name="produce-type">
 
   <button type="submit">Submit</button>
 </form>
 </div>
 
-<script src="../jsme/uploadsvalidation.js"></script>
+<script src="../jsme/signupvalidation.js"></script>
 </body>
 </html>

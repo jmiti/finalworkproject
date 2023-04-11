@@ -7,11 +7,13 @@ const passport = require("passport");
 const mongoose= require("mongoose");
 const bodyParser= require("body-parser");
 const config = require("./config/database")
-const User = require("./models/registerModel")
+const Register = require("./models/registerModel")
 const session= require("express-session");
 
-const registerRoutes = require("./Routes/registerRoutes")
-const loginRoutes = require("./Routes/loginRoutes")
+// const registerRoutes = require("./Routes/registerRoutes")
+// const loginRoutes = require("./Routes/loginRoutes")
+// const agricOfficerRoutes = require("./Routes/agricOfficerRoutes")
+const regformFORoutes = require("./Routes/regformFORoutes")
 
 
 
@@ -52,15 +54,18 @@ app.use(session({
 // * Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
-passport.use(User.createStrategy());
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
+passport.use(Register.createStrategy());
+passport.serializeUser(Register.serializeUser());
+passport.deserializeUser(Register.deserializeUser());
 
 
 app.use(express.static("public"))
 
-app.use("/", registerRoutes)
-app.use("/", loginRoutes)
+// app.use("/", registerRoutes)
+// app.use("/", loginRoutes)
+// app.use("/", agricOfficerRoutes)
+app.use("/", regformFORoutes)
+
 
 
 

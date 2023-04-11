@@ -15,7 +15,6 @@ const registerSchema = new mongoose.Schema({
         email:{
             type:String,
             trim:true,
-            required:true,
             unique:true
         },
 
@@ -28,23 +27,20 @@ const registerSchema = new mongoose.Schema({
         dob:{
             type:String,
             trim:true,
+            default:null
             
         },
 
-        male:{
+        gender:{
             type:String,
             trim:true,
         },
 
-        female:{
-            type:String,
-            trim:true,
-        },
-
+        
         ward:{
             type:String,
             trim:true,
-        
+            default:null
         },
 
         password:{
@@ -65,8 +61,64 @@ const registerSchema = new mongoose.Schema({
             trim:true,
         
         },
+        uniquenumber:{
+            type:String,
+            trim:true,
+            default:null
+        
+        },
+        role:{
+            type:String,
+            trim:true,
+            default:null
+        
+        },
+        ninnumber:{
+            type:String,
+            trim:true,
+            default:null
+        
+        },
+        phonenumber:{
+            type:String,
+            trim:true,
+            default:null
+        
+        },
+        residenttype:{
+            type:String,
+            trim:true,
+            default:null
+        
+        },
+        periodofstay:{
+            type:String,
+            trim:true,
+            default:null
+        
+        },
+        regdate:{
+            type:String,
+            trim:true,
+            default:null
+        
+        },
+        streetname:{
+            type:String,
+            trim:true,
+            default:null
+        
+        },
+        housenumber:{
+            type:String,
+            trim:true,
+            default:null
+        
+        },
+        
+
 
         
 })
-registerSchema.plugin(passportLocalMongoose, {usernameField: "email"});
+registerSchema.plugin(passportLocalMongoose, );
 module.exports = mongoose.model("Register",registerSchema)

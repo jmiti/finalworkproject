@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Store</title>
+	<link rel="stylesheet" type="text/css" href="./css/practicepublic.css">
+</head>
+<body>
+	<h1>Welcome to our online store!</h1>
+	<h2>Our products:</h2>
+	<div class="product">
+		<img src="./images/istockphoto-1034036504-170667a.jpg" alt="Product 1">
+		<h3>Product 1</h3>
+		<p>Description of product 1.</p>
+		<p>Price: $10</p>
+		<button onclick="order('Product 1')">Order Now</button>
+	</div>
+	<div class="product">
+		<img src="./images/istockphoto-106475773-170667a.jpg" alt="Product 2">
+		<h3>Product 2</h3>
+		<p>Description of product 2.</p>
+		<p>Price: $20</p>
+		<button onclick="order('Product 2')">Order Now</button>
+	</div>
+	<div class="product">
+		<img src="./images/istockphoto-1268550865-170667a.jpg" alt="Product 3">
+		<h3>Product 3</h3>
+		<p>Description of product 3.</p>
+		<p>Price: $30</p>
+		<button onclick="order('Product 3')">Order Now</button>
+	</div>
+
+	<script type="text/javascript">
+		function order(productName) {
+			alert("You have ordered " + productName + ". Please contact us at orders@onlinestore.com or dial 1-800-123-4567 to complete your order.");
+		}
+	</script>
+</body>
+</html>
