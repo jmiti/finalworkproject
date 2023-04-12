@@ -15,7 +15,7 @@ const registerSchema = new mongoose.Schema({
         email:{
             type:String,
             trim:true,
-            unique:true
+            // unique:true
         },
 
         contact:{

@@ -12,17 +12,19 @@ router.post("/regformFO", async(req,res)=>{
     try{
         const user = new Register(req.body);
         const userName = await Register.findOne({uniquenumber:req.body.uniquenumber})
-        if(userName){
-            return res.send("this unique id already exists")
-        }
-        else{
-            await Register.register(user,req.body.password,(error)=>{
-                if(error){
-                    throw error
-                }
-                res.redirect("/login")
-            })
-        }
+        // if(userName){
+        //     return res.send("this unique id already exists")
+        // }
+        // else{
+        //     await Register.register(user,req.body.password,(error)=>{
+        //         if(error){
+        //             throw error
+        //         }
+        //         res.redirect("/login")
+        //     })
+        // }
+        await user.save()
+        res.redirect('/regformFO')
     
     }
     catch(error){
